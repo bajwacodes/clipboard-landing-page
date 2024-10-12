@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* -------------------------------------------
+-------------------------------------------
+        PROJECT STARTS HERE
+-------------------------------------------
+------------------------------------------- */
+:root {
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+}
+
+body{
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+h1, 
+h2,
+h3,
+li{
+  color: var(--dark-grayish-blue);
+} 
+
+h1,
+h2,
+h3{
+  font-weight: 600;
+}
+
+
+p{
+  color: var(--grayish-blue);
+}
+
+article{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT HEADER
+-----------------------------
+----------------------------- */
+
+header{
+  background: url(images/bg-header-mobile.png);
+
+  background-size: cover;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT HISTORY BOX
+-----------------------------
+----------------------------- */
+
+.history-box{
+  text-align: center;
+
+  /* border: 3px red solid; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 80%; */
+}
+
+h1{
+  text-wrap: wrap;
+  width: 280px;
+
+  font-size: 1.8rem;
+}
+
+h2{
+  margin-bottom: 1rem;
+}
+
+.description{
+  margin-top: 1rem;
+  max-width: 500px;
+  /* width: 100%; */
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT BUTTONS BOX
+-----------------------------
+----------------------------- */
+
+.download-btns{
+  margin-top: 3rem;
+  margin-bottom: 9rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.ios-btn,
+.mac-btn{
+  color: white;
+  font-weight: 500;
+  border: none;
+
+  padding: .5em 3em;
+  border-radius: 2rem;
+}
+
+.ios-btn{
+  background-color: var(--strong-cyan);
+  box-shadow: 0 4px 6px rgba(0, 255, 212, 0.3);
+}
+
+.mac-btn{
+  background-color: var(--light-blue);
+  box-shadow: 0 4px 6px rgba(103, 132, 255, 0.3); 
+}
+
+/* -------------------------------
+----------------------------------
+EVERYTHING ABOUT SNIPPETS FEATURES
+----------------------------------
+----------------------------- */
+
+.snippets-features{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  text-align: center;
+
+  margin-bottom: 9rem;
+
+  /* border: 3px red solid; */
+}
+
+.features-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT ACCESS BOX
+-----------------------------
+----------------------------- */
+.access-clipboard-box{
+  text-align: center;
+}
+
+.description-2{
+  margin-bottom: 4rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT WORKFLOW BOX
+-----------------------------
+----------------------------- */
+
+.workflow-box{
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+
+  margin-bottom: 7rem;
+}
+
+.workflow-title{
+  margin-top: 4.5rem;
+}
+
+
+.mini-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.mini-titles{
+  padding-top: 1.5rem;
+}
+
+.icons-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT COMPANIES LOGOS
+-----------------------------
+----------------------------- */
+
+.companies-logos{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4rem;
+
+  margin-bottom: 9rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT DOWNLOAD BOX
+-----------------------------
+----------------------------- */
+.download-box{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT BTNs BOX
+-----------------------------
+----------------------------- */
+.btns-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+
+  margin-bottom: 9rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT FOOTER
+-----------------------------
+----------------------------- */
+
+footer{
+  background-color: hsl(200, 20%, 94%);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  padding: 3rem;
+
+  text-align: center;
+}
+
+.footer-img{
+  width: 45%;
+
+  margin: 0 auto;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* li{
+  margin-top: 1.5rem;
+} */
+
+.social-icons{
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT ACTIVE STATES
+-----------------------------
+----------------------------- */
+button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+li:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  color: var(--strong-cyan);
+}
+
+.social-media-icons:hover{
+  filter: grayscale(0%) brightness(0) invert(59%) sepia(98%) saturate(405%) hue-rotate(111deg) brightness(97%) contrast(90%); /* Apply cyan color on hover */
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* -----------------------------
+-----------------------------
+EVERYTHING ABOUT MEDIA QUERIES
+-----------------------------
+----------------------------- */
+
+@media screen and (min-width: 800px) {
+
+  /* -----------------------------
+  -----------------------------
+  EVERYTHING ABOUT HEADER
+  -----------------------------
+  ----------------------------- */
+
+      main{
+        max-width: 100%;
+      }
+
+      header{
+        background: url(images/bg-header-desktop.png) no-repeat;
+  
+        padding-top: 7rem;
+        margin: 0;
+      }
+  
+      .logo-img{
+        width: 11%;
+      }
+  
+  /* -----------------------------
+  -----------------------------
+  EVERYTHING ABOUT HISTORY BOX
+  -----------------------------
+  ----------------------------- */
+  
+      h1{
+        font-size: 3.1rem;
+        width: 100%;
+        margin: 0;
+      }
+  
+      .description{
+        font-size: 1.4rem;
+        width: 60%;
+      }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT DOWNLOAD BUTTONS
+  --------------------------------
+  -------------------------------- */
+  
+  .download-btns{
+    flex-direction: row;
+  }
+  
+  .ios-btn,
+  .mac-btn{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+  
+    padding: 1em 3em;
+    border-radius: 2rem;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT SNIPPET FEATURES
+  --------------------------------
+  -------------------------------- */
+  h2{
+    font-size: 2.8rem;
+  }
+  
+  .description-1{
+    width: 50%;
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT COMPUTER SECTION
+  --------------------------------
+  -------------------------------- */
+  
+  .snippets-features{
+    padding: 0;
+  }
+  
+  .computer-section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 5rem;
+  
+    width: 100%;
+  
+    /* border: 3px solid red; */
+  
+    margin-top: 3rem;
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .computer-img{
+    min-width: 140%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+
+    margin-top: 3rem;
+  
+    left: -130px;
+    /* min-width: 750px; */
+    /* min-height: 800px; */
+  }
+  
+  .features-wrapper{
+    /* border: 3px solid green; */
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  
+    margin-top: 0rem;
+  }
+  
+  .features{
+    /* border: 3px black solid; */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .features-title{
+    font-size: 1.7rem;
+  }
+  
+  .mini-desc{
+    text-align: start;
+    width: 70%;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT ACCESS BOX
+  --------------------------------
+  -------------------------------- */
+  
+  .description-2{
+    width: 80%;
+    font-size: 1.2rem;
+    margin: 0rem auto 6rem auto;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT ICONS WRAPPER
+  --------------------------------
+  -------------------------------- */
+  .icons-wrapper{
+    /* display: flex;
+    justify-content: start; */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+  }
+  
+  .mini-icons{  
+    flex: 1;
+    gap: 0;
+  }
+  
+  .icons-desc{
+    width: auto;
+    margin-top: 0.5rem;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT COMPANIES LOGOS
+  --------------------------------
+  -------------------------------- */
+  
+  .companies-logos{
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT DOWNLOAD BOX
+  --------------------------------
+  -------------------------------- */
+  
+  .description-3{
+    width: 65%;
+    margin: 0 auto;
+  }
+  
+  .btns-box{
+    display: flex;
+    flex-direction: row;
+  
+    margin-top: 1.5rem;
+  }
+  
+  /* -----------------------------
+  --------------------------------
+  EVERYTHING ABOUT FOOTER
+  --------------------------------
+  -------------------------------- */
+  footer{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  ul{
+    flex-direction: row;
+  }
+  
+  }
+
+
+/* Media Query for iPad and Tabs above
+Media Query for Desktops below
+Lot of duplicate code in both, to be removed later. */
+
+
+  @media screen and (min-width: 1000px) {
+
+    /* -----------------------------
+    -----------------------------
+    EVERYTHING ABOUT HEADER
+    -----------------------------
+    ----------------------------- */
+        header{
+          background: url(images/bg-header-desktop.png) no-repeat;
+    
+          padding-top: 7rem;
+          margin: 0;
+        }
+    
+        .logo-img{
+          width: 11%;
+        }
+    
+    /* -----------------------------
+    -----------------------------
+    EVERYTHING ABOUT HISTORY BOX
+    -----------------------------
+    ----------------------------- */
+    
+        h1{
+          font-size: 3.1rem;
+          width: 100%;
+          margin: 0;
+        }
+    
+        .description{
+          font-size: 1.4rem;
+          width: 60%;
+        }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT DOWNLOAD BUTTONS
+    --------------------------------
+    -------------------------------- */
+    
+    .download-btns{
+      flex-direction: row;
+    }
+    
+    .ios-btn,
+    .mac-btn{
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border: none;
+    
+      padding: 1em 3em;
+      border-radius: 2rem;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT SNIPPET FEATURES
+    --------------------------------
+    -------------------------------- */
+    h2{
+      font-size: 2.8rem;
+    }
+    
+    .description-1{
+      width: 50%;
+      font-size: 1.2rem;
+      margin: 0 auto;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT COMPUTER SECTION
+    --------------------------------
+    -------------------------------- */
+    
+    .snippets-features{
+      padding: 0;
+    }
+    
+    .computer-section{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 15rem;
+    
+      width: 100%;
+    
+      /* border: 3px solid red; */
+    
+      margin-top: 3rem;
+    
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .computer-img{
+      min-width: 130%;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+    
+      left: -130px;
+      /* min-width: 750px; */
+      /* min-height: 800px; */
+    }
+    
+    .features-wrapper{
+      /* border: 3px solid green; */
+    
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    
+      margin-top: 2rem;
+    }
+    
+    .features{
+      /* border: 3px black solid; */
+    
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .features-title{
+      font-size: 1.7rem;
+    }
+    
+    .mini-desc{
+      text-align: start;
+      width: 70%;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT ACCESS BOX
+    --------------------------------
+    -------------------------------- */
+    
+    .description-2{
+      width: 80%;
+      font-size: 1.2rem;
+      margin: 0rem auto 6rem auto;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT ICONS WRAPPER
+    --------------------------------
+    -------------------------------- */
+    .icons-wrapper{
+      /* display: flex;
+      justify-content: start; */
+    
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .mini-icons{  
+      flex: 1;
+      gap: 0;
+    }
+    
+    .icons-desc{
+      width: 80%;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT COMPANIES LOGOS
+    --------------------------------
+    -------------------------------- */
+    
+    .companies-logos{
+      flex-direction: row;
+      gap: 6rem;
+      margin-top: 4rem;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT DOWNLOAD BOX
+    --------------------------------
+    -------------------------------- */
+    
+    .description-3{
+      width: 65%;
+      margin: 0 auto;
+    }
+    
+    .btns-box{
+      display: flex;
+      flex-direction: row;
+    
+      margin-top: 1.5rem;
+    }
+    
+    /* -----------------------------
+    --------------------------------
+    EVERYTHING ABOUT FOOTER
+    --------------------------------
+    -------------------------------- */
+    footer{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    
+    ul{
+      flex-direction: row;
+    }
+    
+    }
+    
